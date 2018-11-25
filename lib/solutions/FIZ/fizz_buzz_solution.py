@@ -9,11 +9,32 @@ def fizz_buzz(number):
     #find 5 in string
     five = re.findall('5', str_num)
 
-    if (((number % 3 == 0) or (three)) and ((number % 5 == 0) or (five))):
-        return "fizz buzz"
-    elif (number % 3 == 0) or (three):
-        return "fizz"
+    message = None
+
+##    if (((number % 3 == 0) or (three)) and ((number % 5 == 0) or (five))):
+##        message = "fizz buzz"
+    if (number % 3 == 0) or (three):
+        message = "fizz "
     elif (number % 5 == 0) or (five):
-        return "buzz"
+        message += "buzz "
     else:
-        return number
+        message = number
+
+    #Check if greater than 10
+    if number > 10:
+        #Initialize variables
+        same = False
+        prev = str_num[0]
+
+        for n in str_num:
+            if n == prev:
+                same = True
+            else:
+                same = False
+                break
+
+        if same == True and message != number:
+            message += "deluxe"
+
+print fizz_buzz(3)
+
