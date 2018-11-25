@@ -33,13 +33,13 @@ def fizz_buzz(number):
 
         #If all digits are the same then deluxe
         if same == True:
-            message += " deluxe"
+            message += "deluxe"
 
     if message == "":
         message = str_num
 
     return message.strip()
 
-num = 5
+num = 29
 print fizz_buzz(num)
 print len(fizz_buzz(num))
