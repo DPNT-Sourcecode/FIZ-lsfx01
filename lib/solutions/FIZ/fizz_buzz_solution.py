@@ -1,24 +1,21 @@
 # noinspection PyUnusedLocal
 import re
 def fizz_buzz(number):
+    #conver to string to use find
+    str_num = str(number)
 
-    if (number % 3 == 0) and (number % 5 == 0):
-        return "fizz buzz"
-    elif number % 3 == 0:
+    #find 3 in string
+    three = re.findall('3', str_num)
+    #find 5 in string
+    five = re.findall('5', str_num)
+
+    if (three):
         return "fizz"
-    elif number % 5 == 0:
+    elif (five):
         return "buzz"
     else:
         return number
 
 
-import re
-def test(num):
-    num2 = str(num)
-    num3 = re.findall(3, num)
-    if num3:
-        print 'there is a 3'
-    else:
-        print 'no'
 
-test(12)
+print fizz_buzz('12')
