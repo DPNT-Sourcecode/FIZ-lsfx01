@@ -9,6 +9,7 @@ def fizz_buzz(number):
     #find 5 in string
     five = re.findall('5', str_num)
 
+    #Initialize message to return
     message = ""
 
     if (number % 3 == 0) or (three):
@@ -32,10 +33,9 @@ def fizz_buzz(number):
                 same = False
                 break
 
+        #If all digits are the same and the message is not the input add deluxe
         if same == True and message != number:
             message += "deluxe"
 
     return message
-
-print fizz_buzz(33)
 
