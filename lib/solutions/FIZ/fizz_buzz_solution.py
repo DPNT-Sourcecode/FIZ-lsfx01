@@ -11,33 +11,25 @@ def fizz_buzz(number):
 
     message = ""
 
+    #fizz buzz logic
     if (number % 3 == 0) or (three):
         message = "fizz "
     if (number % 5 == 0) or (five):
         message += "buzz "
 
-    #Check if greater than 10, first condition to be deluxe
-    if number > 10:
-        #Initialize variables
-        same = False
-        prev = str_num[0]
-
-        #check every char against previous
-        for n in str_num:
-            if n == prev:
-                same = True
-            else:
-                same = False
-                break
-
-        #If all digits are the same second condition to be deluxe
-        if (same == True) and (number % 2 == 0):
+    #deluxe logic
+    if ((number % 3 == 0) and (three)) or ((number % 5 == 0) and (five)):
+        if (number % 2 == 0):
             message += "deluxe"
-        elif (same == True) and (number % 2 != 0):
+        else:
             message += "fake deluxe"
 
-    #None of the above is a plain number
+    #None of the above then is a plain number
     if message == "":
         message = str_num
 
-    return message.strip()
+    return message.strip()
+
+num = 151
+print fizz_buzz(num)
+print len(fizz_buzz(num))
