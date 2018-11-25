@@ -31,11 +31,19 @@ def fizz_buzz(number):
                 break
 
         #If all digits are the same second condition to be deluxe
-        if same == True:
+        if (same == True) and (number % 2 == 0):
             message += "deluxe"
+        elif (same == True) and (number % 2 != 0):
+            message += "fake deluxe"
 
     #None of the above is a plain number
     if message == "":
         message = str_num
 
     return message.strip()
+
+
+
+num = 33
+print fizz_buzz(num)
+print len(fizz_buzz(num))
