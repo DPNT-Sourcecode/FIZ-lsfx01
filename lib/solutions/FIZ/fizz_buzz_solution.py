@@ -38,4 +38,4 @@ def fizz_buzz(number):
     if message == "":
         message = str_num
 
-    return message.strip()
+    return message.strip()
