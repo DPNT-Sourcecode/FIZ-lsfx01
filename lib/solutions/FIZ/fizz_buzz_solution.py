@@ -9,16 +9,15 @@ def fizz_buzz(number):
     #find 5 in string
     five = re.findall('5', str_num)
 
-    if (((number % 3 == 0) or (three)) and ((number % 5 == 0) or (five))):
-        message = "fizz buzz"
-    elif (number % 3 == 0) or (three):
-        message = "fizz"
-    elif (number % 5 == 0) or (five):
-        message = "buzz"
-    else:
-        message = number
+    message = str_num
 
-    #Check if greater than 10
+    if (number % 3 == 0) or (three):
+        message = "fizz "
+    if (number % 5 == 0) or (five):
+        message += "buzz "
+
+
+    #Check if greater than 10 to be deluxe
     if number > 10:
         #Initialize variables
         same = False
@@ -32,8 +31,12 @@ def fizz_buzz(number):
                 same = False
                 break
 
-        #If all digits are the same and the message is not the input add deluxe
-        if same == True and message != number:
+        #If all digits are the same then deluxe
+        if same == True:
             message += " deluxe"
 
-    return message
+    return message.strip()
+
+num = 11
+print fizz_buzz(num)
+print len(fizz_buzz(num))
