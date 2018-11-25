@@ -9,7 +9,7 @@ def fizz_buzz(number):
     #find 5 in string
     five = re.findall('5', str_num)
 
-    message = str_num
+    message = ""
 
     if (number % 3 == 0) or (three):
         message = "fizz "
@@ -35,8 +35,11 @@ def fizz_buzz(number):
         if same == True:
             message += " deluxe"
 
+    if message == "":
+        message = str_num
+
     return message.strip()
 
-num = 11
+num = 5
 print fizz_buzz(num)
 print len(fizz_buzz(num))
