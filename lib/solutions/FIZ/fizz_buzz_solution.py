@@ -19,6 +19,7 @@ def fizz_buzz(number):
 
     #deluxe logic
     if ((number % 3 == 0) and (three)) or ((number % 5 == 0) and (five)):
+        #if even then deluxe else fake deluxe
         if (number % 2 == 0):
             message += "deluxe"
         else:
@@ -28,8 +29,4 @@ def fizz_buzz(number):
     if message == "":
         message = str_num
 
-    return message.strip()
-
-num = 51
-print fizz_buzz(num)
-print len(fizz_buzz(num))
+    return message.strip()
