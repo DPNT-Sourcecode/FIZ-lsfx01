@@ -9,6 +9,6 @@
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 
-def sum(num1, num2):
+def compute(num1, num2):
     return int(num1 + num2)
 
