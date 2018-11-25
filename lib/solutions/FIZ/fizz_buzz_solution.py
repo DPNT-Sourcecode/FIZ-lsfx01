@@ -12,11 +12,13 @@ def fizz_buzz(number):
     #Initialize message to return
     message = ""
 
-    if (number % 3 == 0) or (three):
-        message = "fizz "
-    if (number % 5 == 0) or (five):
-        message += "buzz "
-    if message == "":
+    if (((number % 3 == 0) or (three)) and ((number % 5 == 0) or (five))):
+        message = "fizz buzz"
+    elif (number % 3 == 0) or (three):
+        message = "fizz"
+    elif (number % 5 == 0) or (five):
+        message = "buzz"
+    else:
         message = number
 
     #Check if greater than 10
@@ -35,7 +37,8 @@ def fizz_buzz(number):
 
         #If all digits are the same and the message is not the input add deluxe
         if same == True and message != number:
-            message += "deluxe"
+            message += " deluxe"
 
     return message
 
+print fizz_buzz(999)
