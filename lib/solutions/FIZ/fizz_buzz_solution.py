@@ -16,8 +16,7 @@ def fizz_buzz(number):
     if (number % 5 == 0) or (five):
         message += "buzz "
 
-
-    #Check if greater than 10 to be deluxe
+    #Check if greater than 10, first condition to be deluxe
     if number > 10:
         #Initialize variables
         same = False
@@ -31,15 +30,12 @@ def fizz_buzz(number):
                 same = False
                 break
 
-        #If all digits are the same then deluxe
+        #If all digits are the same second condition to be deluxe
         if same == True:
             message += "deluxe"
 
+    #None of the above is a plain number
     if message == "":
         message = str_num
 
-    return message.strip()
-
-num = 29
-print fizz_buzz(num)
-print len(fizz_buzz(num))
+    return message.strip()
