@@ -9,3 +9,13 @@ def fizz_buzz(number):
     else:
         return number
 
+
+
+def test(num):
+    num2 = str(num)
+    if num2.find('3'):
+        print 'there is a 3'
+    else:
+        print 'no'
+
+test(12)
