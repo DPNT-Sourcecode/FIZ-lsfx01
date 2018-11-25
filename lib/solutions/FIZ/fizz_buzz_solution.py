@@ -30,6 +30,6 @@ def fizz_buzz(number):
 
     return message.strip()
 
-num = 151
+num = 51
 print fizz_buzz(num)
 print len(fizz_buzz(num))
