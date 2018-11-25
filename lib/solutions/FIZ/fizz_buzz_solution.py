@@ -9,7 +9,7 @@ def fizz_buzz(number):
     #find 5 in string
     five = re.findall('5', str_num)
 
-    if ((number % 3 == 0) and (number % 5 == 0)) or (three and five):
+    if ((number % 3 == 0 or three) and (number % 5 == 0 or five)):
         return "fizz buzz"
     elif (number % 3 == 0) or (three):
         return "fizz"
@@ -19,4 +19,4 @@ def fizz_buzz(number):
         return number
 
 
-print fizz_buzz(546)
+print fizz_buzz(315)
