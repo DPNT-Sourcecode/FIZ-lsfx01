@@ -40,10 +40,4 @@ def fizz_buzz(number):
     if message == "":
         message = str_num
 
-    return message.strip()
-
-
-
-num = 33
-print fizz_buzz(num)
-print len(fizz_buzz(num))
+    return message.strip()
