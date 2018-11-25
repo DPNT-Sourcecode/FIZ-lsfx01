@@ -16,4 +16,7 @@ def fizz_buzz(number):
     elif (number % 5 == 0) or (five):
         return "buzz"
     else:
-        return number
+        return number
+
+
+print fizz_buzz(546)
