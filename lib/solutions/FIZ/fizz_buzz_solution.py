@@ -38,5 +38,5 @@ def fizz_buzz(number):
 
     return message
 
-print fizz_buzz(111)
+print fizz_buzz(555)
 
